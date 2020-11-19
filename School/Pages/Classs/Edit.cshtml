@@ -1,0 +1,65 @@
+﻿@page
+@model School.Pages.Classs.EditModel
+
+@{
+    ViewData["Title"] = "Изменить информацию о классе";
+}
+
+<h1>Изменить</h1>
+
+<h4>Класс</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Class.ID" />
+            <div class="form-group">
+                <label asp-for="Class.ID_class" class="control-label"></label>
+                <input asp-for="Class.ID_class" class="form-control" />
+                <span asp-validation-for="Class.ID_class" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Class.StaffID" class="control-label"></label>
+                <input asp-for="Class.StaffID" class="form-control" />
+                <span asp-validation-for="Class.StaffID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Class.VidID" class="control-label"></label>
+                <input asp-for="Class.VidID" class="form-control" />
+                <span asp-validation-for="Class.VidID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Class.Kolstu" class="control-label"></label>
+                <input asp-for="Class.Kolstu" class="form-control" />
+                <span asp-validation-for="Class.Kolstu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Class.Bukva" class="control-label"></label>
+                <input asp-for="Class.Bukva" class="form-control" />
+                <span asp-validation-for="Class.Bukva" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Class.Godobuch" class="control-label"></label>
+                <input asp-for="Class.Godobuch" class="form-control" />
+                <span asp-validation-for="Class.Godobuch" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Class.Godsozd" class="control-label"></label>
+                <input asp-for="Class.Godsozd" class="form-control" />
+                <span asp-validation-for="Class.Godsozd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Вернуться назад</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

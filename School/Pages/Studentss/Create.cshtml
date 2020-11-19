@@ -1,0 +1,69 @@
+﻿@page
+@model School.Pages.Studentss.CreateModel
+
+@{
+    ViewData["Title"] = "Добавить информацию о ученике";
+}
+
+<h1>Введите информацию</h1>
+
+<h4>о ученике, пожалуйста:)</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Students.FIO" class="control-label"></label>
+                <input asp-for="Students.FIO" class="form-control" />
+                <span asp-validation-for="Students.FIO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Students.Dr" class="control-label"></label>
+                <input asp-for="Students.Dr" class="form-control" />
+                <span asp-validation-for="Students.Dr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Students.Pol" class="control-label"></label>
+                <input asp-for="Students.Pol" class="form-control" />
+                <span asp-validation-for="Students.Pol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Students.Address" class="control-label"></label>
+                <input asp-for="Students.Address" class="form-control" />
+                <span asp-validation-for="Students.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Students.FIOfather" class="control-label"></label>
+                <input asp-for="Students.FIOfather" class="form-control" />
+                <span asp-validation-for="Students.FIOfather" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Students.FIOmother" class="control-label"></label>
+                <input asp-for="Students.FIOmother" class="form-control" />
+                <span asp-validation-for="Students.FIOmother" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Students.ClassID" class="control-label"></label>
+                <input asp-for="Students.ClassID" class="form-control" />
+                <span asp-validation-for="Students.ClassID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Students.Dopinf" class="control-label"></label>
+                <input asp-for="Students.Dopinf" class="form-control" />
+                <span asp-validation-for="Students.Dopinf" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Добавить" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Вернуться назад</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

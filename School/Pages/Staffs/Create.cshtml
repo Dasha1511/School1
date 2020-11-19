@@ -1,0 +1,64 @@
+﻿@page
+@model School.Pages.Staffs.CreateModel
+
+@{
+    ViewData["Title"] = "Создать информацию о сотруднике";
+}
+
+<h1>Добавьте информацию</h1>
+
+<h4>о сотруднике, пожалуйста:)</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Staff.FIO" class="control-label"></label>
+                <input asp-for="Staff.FIO" class="form-control" />
+                <span asp-validation-for="Staff.FIO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Staff.Old" class="control-label"></label>
+                <input asp-for="Staff.Old" class="form-control" />
+                <span asp-validation-for="Staff.Old" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Staff.Pol" class="control-label"></label>
+                <input asp-for="Staff.Pol" class="form-control" />
+                <span asp-validation-for="Staff.Pol" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Staff.Address" class="control-label"></label>
+                <input asp-for="Staff.Address" class="form-control" />
+                <span asp-validation-for="Staff.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Staff.Pasport" class="control-label"></label>
+                <input asp-for="Staff.Pasport" class="form-control" />
+                <span asp-validation-for="Staff.Pasport" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Staff.Telephone" class="control-label"></label>
+                <input asp-for="Staff.Telephone" class="form-control" />
+                <span asp-validation-for="Staff.Telephone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Staff.DolznostID" class="control-label"></label>
+                <input asp-for="Staff.DolznostID" class="form-control" />
+                <span asp-validation-for="Staff.DolznostID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Добавить" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Вернуться назад</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

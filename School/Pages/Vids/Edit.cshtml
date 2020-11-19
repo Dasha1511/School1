@@ -1,0 +1,45 @@
+﻿@page
+@model School.Pages.Vids.EditModel
+
+@{
+    ViewData["Title"] = "Изменить информациб о виде класса";
+}
+
+<h1>Изменить</h1>
+
+<h4>Вид класса</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Vid.ID" />
+            <div class="form-group">
+                <label asp-for="Vid.ID_type" class="control-label"></label>
+                <input asp-for="Vid.ID_type" class="form-control" />
+                <span asp-validation-for="Vid.ID_type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vid.Naimenovanie" class="control-label"></label>
+                <input asp-for="Vid.Naimenovanie" class="form-control" />
+                <span asp-validation-for="Vid.Naimenovanie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vid.Opisanie" class="control-label"></label>
+                <input asp-for="Vid.Opisanie" class="form-control" />
+                <span asp-validation-for="Vid.Opisanie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Вернуться назад</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

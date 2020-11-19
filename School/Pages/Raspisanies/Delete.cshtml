@@ -1,0 +1,58 @@
+﻿@page
+@model School.Pages.Raspisanies.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>УДАЛИТЬ</h1>
+
+<h3>Вы уверены, что хотите удалить эту информацию?</h3>
+<div>
+    <h4>Расписание</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Raspisanie.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Raspisanie.Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Raspisanie.Dennedely)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Raspisanie.Dennedely)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Raspisanie.ClassID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Raspisanie.ClassID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Raspisanie.PredmetsID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Raspisanie.PredmetsID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Raspisanie.Vremanachala)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Raspisanie.Vremanachala)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Raspisanie.Vremaokonch)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Raspisanie.Vremaokonch)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Raspisanie.ID" />
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-page="./Index">Вернуться назад</a>
+    </form>
+</div>

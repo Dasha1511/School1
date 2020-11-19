@@ -1,0 +1,40 @@
+﻿@page
+@model School.Pages.Predmetss.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>УДАЛИТЬ</h1>
+
+<h3>Вы уверены, что хотите удалить эту информацию?</h3>
+<div>
+    <h4>Предмет</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Predmets.Naimenovanie)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Predmets.Naimenovanie)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Predmets.Opisanie)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Predmets.Opisanie)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Predmets.StaffID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Predmets.StaffID)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Predmets.ID" />
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-page="./Index">Вернуться назад</a>
+    </form>
+</div>

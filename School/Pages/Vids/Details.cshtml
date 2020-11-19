@@ -1,0 +1,37 @@
+﻿@page
+@model School.Pages.Vids.DetailsModel
+
+@{
+    ViewData["Title"] = "Подробная информация";
+}
+
+<h1>Подробнее о</h1>
+
+<div>
+    <h4>виде класса</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vid.ID_type)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vid.ID_type)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vid.Naimenovanie)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vid.Naimenovanie)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vid.Opisanie)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vid.Opisanie)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Vid.ID">Изменить</a> |
+    <a asp-page="./Index">Вернуться назад</a>
+</div>

@@ -1,0 +1,67 @@
+﻿@page
+@model School.Pages.Studentss.DetailsModel
+
+@{
+    ViewData["Title"] = "Подробная информация";
+}
+
+<h1>Подробнее о</h1>
+
+<div>
+    <h4>ученике</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Students.FIO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Students.FIO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Students.Dr)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Students.Dr)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Students.Pol)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Students.Pol)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Students.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Students.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Students.FIOfather)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Students.FIOfather)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Students.FIOmother)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Students.FIOmother)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Students.ClassID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Students.ClassID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Students.Dopinf)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Students.Dopinf)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Students.ID">Изменить</a> |
+    <a asp-page="./Index">Вернуться назад</a>
+</div>

@@ -1,0 +1,52 @@
+﻿@page
+@model School.Pages.Dolznosts.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>УДАЛИТЬ</h1>
+
+<h3>Вы уверены, что хотите удалить эту информацию?</h3>
+<div>
+    <h4>Должность</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dolznost.NaimenovanieDolznosti)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dolznost.NaimenovanieDolznosti)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dolznost.Oklad)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dolznost.Oklad)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dolznost.Obyazannosti)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dolznost.Obyazannosti)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dolznost.Trebovaniya)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dolznost.Trebovaniya)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dolznost.ID_Dolznost)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dolznost.ID_Dolznost)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Dolznost.ID" />
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-page="./Index">Вернуться назад</a>
+    </form>
+</div>

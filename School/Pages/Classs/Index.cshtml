@@ -1,0 +1,81 @@
+﻿@page
+@model School.Pages.Classs.IndexModel
+
+@{
+    ViewData["Title"] = "Все классы";
+}
+
+<h1>Классы</h1>
+
+<p>
+    <a asp-page="Create">Добавить новый</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Class[0].ID_class)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Class[0].Staff)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Class[0].Vid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Class[0].Kolstu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Class[0].Bukva)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Class[0].Godobuch)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Class[0].Godsozd)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Class) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_class)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StaffID)
+            </td>
+            <td>
+                @{
+                    try
+                    {
+                        @Model.Vid.First(r => r.ID == item.VidID).Naimenovanie
+                    }
+                    catch
+                    {
+                        <p>нет</p>
+                    }
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kolstu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bukva)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Godobuch)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Godsozd)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Изменить</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Подробнее</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

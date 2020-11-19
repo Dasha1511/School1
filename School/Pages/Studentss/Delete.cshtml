@@ -1,0 +1,70 @@
+﻿@page
+@model School.Pages.Studentss.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>УДАЛИТЬ</h1>
+
+<h3>Вы уверены, что хотите удалить эту информацию?</h3>
+<div>
+    <h4>Ученик</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Students.FIO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Students.FIO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Students.Dr)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Students.Dr)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Students.Pol)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Students.Pol)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Students.Address)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Students.Address)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Students.FIOfather)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Students.FIOfather)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Students.FIOmother)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Students.FIOmother)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Students.ClassID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Students.ClassID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Students.Dopinf)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Students.Dopinf)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Students.ID" />
+        <input type="submit" value="Удалить" class="btn btn-danger" /> |
+        <a asp-page="./Index">Вернуться назад</a>
+    </form>
+</div>

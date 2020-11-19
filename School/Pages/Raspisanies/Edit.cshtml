@@ -1,0 +1,60 @@
+﻿@page
+@model School.Pages.Raspisanies.EditModel
+
+@{
+    ViewData["Title"] = "Изменить информацию о расписании";
+}
+
+<h1>Изменить</h1>
+
+<h4>Расписание</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Raspisanie.ID" />
+            <div class="form-group">
+                <label asp-for="Raspisanie.Date" class="control-label"></label>
+                <input asp-for="Raspisanie.Date" class="form-control" />
+                <span asp-validation-for="Raspisanie.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Raspisanie.Dennedely" class="control-label"></label>
+                <input asp-for="Raspisanie.Dennedely" class="form-control" />
+                <span asp-validation-for="Raspisanie.Dennedely" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Raspisanie.ClassID" class="control-label"></label>
+                <input asp-for="Raspisanie.ClassID" class="form-control" />
+                <span asp-validation-for="Raspisanie.ClassID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Raspisanie.PredmetsID" class="control-label"></label>
+                <input asp-for="Raspisanie.PredmetsID" class="form-control" />
+                <span asp-validation-for="Raspisanie.PredmetsID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Raspisanie.Vremanachala" class="control-label"></label>
+                <input asp-for="Raspisanie.Vremanachala" class="form-control" />
+                <span asp-validation-for="Raspisanie.Vremanachala" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Raspisanie.Vremaokonch" class="control-label"></label>
+                <input asp-for="Raspisanie.Vremaokonch" class="form-control" />
+                <span asp-validation-for="Raspisanie.Vremaokonch" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Вернуться назад</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
